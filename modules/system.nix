@@ -2,14 +2,22 @@
   config,
   lib,
   pkgs,
+  nixpkgs,
+  templates,
   ...
 }:
 
 {
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    registry.p.flake = nixpkgs;
+    registry.templates.flake = templates;
+
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
+
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   time.timeZone = "Europe/Berlin";
@@ -45,7 +53,7 @@
     };
 
     zsh.enable = true;
-    firefox.enable = true;
+
   };
 
   environment.systemPackages = with pkgs; [
@@ -67,6 +75,9 @@
     # Networking applications
     curl
     wget
+
+    zip
+    unzip
   ];
 
   fonts.packages = with pkgs; [
