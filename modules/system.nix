@@ -29,13 +29,13 @@
   #   extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
   # };
 
-  users.users.tori = {
+  users.users.v = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
       "networkmanager"
     ];
-    hashedPasswordFile = "/persist/passwords/tori";
+    hashedPasswordFile = "/persist/passwords/v";
     shell = pkgs.zsh;
   };
 

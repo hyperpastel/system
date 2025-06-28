@@ -24,11 +24,11 @@
     },
     "templates": {
       "locked": {
-        "lastModified": 1750082842,
-        "narHash": "sha256-45Yo3w3DMJCCQwK7xzXF6wByX2ayH+ymzKg4IK3vVBo=",
+        "lastModified": 1750158587,
+        "narHash": "sha256-0aVuYLDsFStPQ6Wjz9oo54d1qqf8DCfrlDw1+hYzPTc=",
         "owner": "hyperpastel",
         "repo": "flake-templates",
-        "rev": "3327e2d3a1bc63763745b445c6b067f8ed0a8746",
+        "rev": "f964ae4dcf606da202282ad7355c540b0d922bb2",
         "type": "github"
       },
       "original": {
