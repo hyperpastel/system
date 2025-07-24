@@ -4,18 +4,26 @@
   pkgs,
   nixpkgs,
   templates,
+  aagl,
   ...
 }:
+
+let
+  settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+
+  } // aagl.nixConfig;
+in
 
 {
   nix = {
     registry.p.flake = nixpkgs;
     registry.templates.flake = templates;
 
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    inherit settings;
   };
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

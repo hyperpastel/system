@@ -4,5 +4,6 @@
     ./system.nix
     ./networking.nix
     ./persistence.nix
+    ./gaming.nix
   ];
 }
