@@ -79,6 +79,7 @@ in
     bat
     eza
     ripgrep
+    fd
 
     # Networking applications
     curl
