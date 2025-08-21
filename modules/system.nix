@@ -4,7 +4,6 @@
   pkgs,
   nixpkgs,
   templates,
-  aagl,
   ...
 }:
 
@@ -14,10 +13,8 @@ let
       "nix-command"
       "flakes"
     ];
-
-  } // aagl.nixConfig;
+  };
 in
-
 {
   nix = {
     registry.p.flake = nixpkgs;
@@ -61,7 +58,6 @@ in
     };
 
     zsh.enable = true;
-
   };
 
   environment.systemPackages = with pkgs; [
