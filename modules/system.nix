@@ -61,6 +61,14 @@ in
     };
 
     zsh.enable = true;
+
+    git.enable = true;
+
+    gnupg.agent = {
+      enable = true;
+      pinentryPackage = pkgs.pinentry-curses;
+      enableSSHSupport = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
