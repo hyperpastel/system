@@ -98,7 +98,8 @@ in
 
   fonts.packages = with pkgs; [
     noto-fonts
-    nerd-fonts.jetbrains-mono
+    # nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka-term-slab
   ];
 
   system.stateVersion = "24.11"; # Did you read the comment?
