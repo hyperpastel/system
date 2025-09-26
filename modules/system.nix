@@ -4,6 +4,7 @@
   pkgs,
   nixpkgs,
   templates,
+  nixseparatedebuginfod,
   ...
 }:
 
@@ -49,6 +50,8 @@ in
     pulse.enable = true;
     alsa.enable = true;
   };
+
+  services.nixseparatedebuginfod.enable = true;
 
   programs = {
     hyprland = {

@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     templates.url = "github:hyperpastel/flake-templates";
+    nixseparatedebuginfod.url = "github:symphorien/nixseparatedebuginfod";
   };
 
   outputs =
@@ -11,7 +12,7 @@
       self,
       nixpkgs,
       templates,
-      ...
+      nixseparatedebuginfod
     }@inputs:
 
     {
@@ -20,7 +21,7 @@
         modules = [
           ./modules/all.nix
         ];
-        specialArgs = { inherit nixpkgs templates; };
+        specialArgs = { inherit nixpkgs templates nixseparatedebuginfod; };
       };
     };
 }
