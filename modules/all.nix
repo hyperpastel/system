@@ -1,5 +1,6 @@
 {
   imports = [
+    ./surfshark.nix
     ./boot.nix
     ./system.nix
     ./networking.nix
