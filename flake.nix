@@ -12,7 +12,7 @@
       self,
       nixpkgs,
       templates,
-      nixseparatedebuginfod
+      nixseparatedebuginfod,
     }@inputs:
 
     {

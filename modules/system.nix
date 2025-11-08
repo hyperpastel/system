@@ -51,7 +51,7 @@ in
     alsa.enable = true;
   };
 
-  services.nixseparatedebuginfod.enable = true;
+  services.nixseparatedebuginfod2.enable = true;
 
   programs = {
     hyprland = {
