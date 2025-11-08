@@ -95,6 +95,9 @@ in
 
     zip
     unzip
+
+    qmk
+    qmk-udev-rules
   ];
 
   fonts.packages = with pkgs; [
@@ -102,6 +105,8 @@ in
     # nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka-term-slab
   ];
+
+  hardware.keyboard.qmk.enable = true;
 
   system.stateVersion = "24.11"; # Did you read the comment?
 }
