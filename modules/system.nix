@@ -80,6 +80,7 @@ in
     brightnessctl
     typos
     nixfmt-rfc-style
+    tree
 
     # Replacements of modern Unix commands
     uutils-coreutils
