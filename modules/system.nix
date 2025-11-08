@@ -89,6 +89,9 @@ in
     ripgrep
     fd
 
+    typst
+    tinymist
+
     # Networking applications
     curl
     wget
@@ -104,6 +107,7 @@ in
     noto-fonts
     # nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka-term-slab
+    atkinson-hyperlegible-next
   ];
 
   hardware.keyboard.qmk.enable = true;
