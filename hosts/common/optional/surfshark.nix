@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 let
@@ -36,6 +34,8 @@ let
   openVPNConfigs = map getConfig (builtins.attrNames (builtins.readDir configFiles));
 in
 {
+
   networking.networkmanager.plugins = [ pkgs.networkmanager-openvpn ];
   services.openvpn.servers = builtins.listToAttrs openVPNConfigs;
+
 }

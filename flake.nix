@@ -16,12 +16,16 @@
     }@inputs:
 
     {
-      nixosConfigurations.teyvat = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./modules/all.nix
-        ];
-        specialArgs = { inherit nixpkgs templates nixseparatedebuginfod; };
+      nixosConfigurations = {
+        teyvat = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/teyvat
+          ];
+          specialArgs = { inherit nixpkgs templates nixseparatedebuginfod; };
+        };
+
+        # TODO add darksea here!
       };
     };
 }
