@@ -14,19 +14,13 @@ in
 
   imports = [
     ./host-spec.nix
+    ./unfree.nix
   ];
 
   networking = {
     hostName = cfg.hostName;
-  }
-  // (
-    if cfg.isWireless then
-      {
-        networkmanager.enable = true;
-      }
-    else
-      { }
-  );
+    networkmanager.enable = cfg.isWireless;
+  };
 
   nix = {
     registry.p.flake = nixpkgs;

@@ -13,6 +13,7 @@
         isWireless = lib.mkOption {
           type = lib.types.bool;
           description = "Whether the system is wireless";
+          default = false;
         };
 
         impermanence = {
