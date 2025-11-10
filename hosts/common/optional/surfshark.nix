@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 let
@@ -9,7 +7,7 @@ let
     name = "surfshark-config";
     src = pkgs.fetchurl {
       url = "https://my.surfshark.com/vpn/api/v1/server/configurations";
-      sha256 = "sha256-WCwptc/09kcRql0kH4ip+r2rzkREgQ/XUz4TRQon6ps=";
+      sha256 = "sha256-1Uamw1KT/EbGxNotj/SR7RKQyRh4xkIwvN+6uxkmJ1s=";
     };
     phases = [ "installPhase" ];
     buildInputs = [
@@ -36,6 +34,8 @@ let
   openVPNConfigs = map getConfig (builtins.attrNames (builtins.readDir configFiles));
 in
 {
+
   networking.networkmanager.plugins = [ pkgs.networkmanager-openvpn ];
   services.openvpn.servers = builtins.listToAttrs openVPNConfigs;
+
 }

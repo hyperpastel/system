@@ -11,6 +11,8 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
   boot = {
 
     loader.systemd-boot.enable = true;
@@ -114,6 +116,11 @@
   swapDevices = [
     { device = "/dev/disk/by-uuid/55e38172-f30a-41ef-a415-cbf6ee738fbe"; }
   ];
+
+  environment.etc = {
+    "machine-id".source = "/persist/etc/machine-id";
+    "NetworkManager/system-connections".source = "/persist/etc/NetworkManager/system-connections";
+  };
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
