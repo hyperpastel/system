@@ -34,6 +34,9 @@ in
     };
   };
 
+  nixpkgs.config.allowUnfreePredicate =
+    pkg: builtins.elem (lib.getName pkg) config.neo.unfreePredicate;
+
   users.users.v = {
     isNormalUser = true;
     extraGroups = [

@@ -25,7 +25,13 @@
           specialArgs = { inherit nixpkgs templates nixseparatedebuginfod; };
         };
 
-        # TODO add darksea here!
+        darksea = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/darksea
+          ];
+          specialArgs = { inherit nixpkgs templates nixseparatedebuginfod; };
+        };
       };
     };
 }
