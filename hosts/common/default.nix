@@ -87,6 +87,7 @@ in
     eza
     ripgrep
     fd
+    fzf
 
     # Networking applications
     curl
