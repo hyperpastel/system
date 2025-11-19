@@ -26,6 +26,7 @@ in
     isNVIDIA = lib.mkOption {
       type = lib.types.bool;
       description = "Whether the system uses an NVIDIA GPU";
+      default = false;
     };
     discord.enable = lib.mkEnableOption "Enable using discord";
   };
