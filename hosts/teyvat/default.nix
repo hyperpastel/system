@@ -11,6 +11,7 @@
     ../../hosts/common/optional/surfshark.nix
 
     ../../modules/qmk.nix
+    ../../modules/gaming.nix
   ];
 
   neo.hostSpec = {
@@ -21,6 +22,8 @@
       passwordPath = "/persist/passwords/v";
     };
   };
+  
+  neo.gaming.steam.enable = true;
 
   neo.qmk.enable = true;
 
